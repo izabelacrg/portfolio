@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <!-- Garante layout responsivo em celulares -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Descrição exibida nos resultados de busca (SEO) -->
+    <meta name="description" content="Portfólio de Izabela Gonçalves — Biblioteconomia, Sistemas de Informação e Engenharia de Dados.">
+    <title>Izabela Gonçalves | Portfolio</title>
+
+    <!-- Aplica o tema salvo ANTES de desenhar a página (evita "piscar" claro->escuro) -->
+    <script>
+        try {
+            const t = localStorage.getItem("tema");
+            if (t) document.documentElement.dataset.theme = t;
+        } catch (e) { /* localStorage indisponível: usa o tema padrão */ }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- CABEÇALHO: menu fixo, visível em todas as seções -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="#inicio" class="logo">IZA</a>
+            <!-- Botão hambúrguer (mobile); aria-expanded é atualizado pelo script.js para leitores de tela -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#sobre">Sobre mim</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <!-- Alterna claro/escuro; a escolha é salva no localStorage ("tema") -->
+                <li><button class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro">◐</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- INÍCIO (hero): apresentação e chamadas para ação -->
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">PESSOAS • TECNOLOGIA • DADOS</p>
+                <h1>Izabela<br><span>Gonçalves</span></h1>
+                <p class="hero-text">
+                    Bibliotecária e Engenheira de Dados
+                </p>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="button primary">Ver portfólio</a>
+                    <a href="#contato" class="button secondary">Entrar em contato</a>
+                </div>
+            </div>
+
+            <!-- Card decorativo estilo editor de código (compacto) -->
+            <!-- aria-hidden: é só visual, leitores de tela ignoram -->
+            <div class="code-card" aria-hidden="true">
+                <div class="code-card-header">
+                    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                    <span class="filename">izabela.py</span>
+                </div>
+<!-- Os <span> com classes (kw, cls, str, fn) servem apenas para colorir a sintaxe via CSS.
+     O <pre> preserva a indentação, por isso o código não está identado como o resto do HTML -->
+<pre><code><span class="kw">class</span> <span class="cls">Izabela</span>:
+    formacao = [<span class="str">"Biblioteconomia"</span>, <span class="str">"Sistemas de Informação"</span>]
+    area = [<span class="str">"Engenharia de Dados"</span>, <span class="str">"Governança & Qualidade"</span>]
+    tools = [<span class="str">"SAP Business Data Cloud"</span>, <span class="str">"Databricks"</span>, <span class="str">"SQL"</span>, <span class="str">"Python"</span>]
+
+    <span class="kw">def</span> <span class="fn">missao</span>(self):
+        <span class="kw">return</span> <span class="str">"Do dado à informação, da informação ao conhecimento."</span></code></pre>
+            </div>
+        </section>
+
+        <!-- SOBRE MIM -->
+        <section id="sobre" class="section">
+            <div class="section-heading"><span>01</span><h2>Sobre mim</h2></div>
+            <div class="two-cols">
+                <div>
+                    <img src="assets/foto.png" alt="Foto de Izabela Gonçalves" class="about-photo">
+                    <p class="lead">"Nunca seja tão gentil a ponto de esquecer de ser inteligente. E nunca seja tão inteligente a ponto de esquecer de ser gentil."</p>
+                    <p class="quote-author">— T. S.</p>
+                </div>
+                <div class="about-text">
+                    <p>Sou formada em Biblioteconomia e Ciência da informação pela UFMG e curso Sistemas de Informação na UNINTER como segunda graduação. Há um ano atuo com Engenharia de Dados, unindo organização e gestão da informação com tecnologia, dados e pessoas.</p>
+                    <p>Organização, classificação, curadoria e recuperação da informação se conectam a temas que hoje fazem parte da minha atuação: qualidade, estruturação, governança e uso de dados. É nessa interseção que venho construindo minha carreira.</p>
+                    <p>Fora do trabalho e dos estudos, gosto de RPGs, cozy games, sudoku, quebra-cabeças e literatura — quase sempre com uma trilha sonora ao lado, e a companhia do meu gato.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FORMAÇÃO: acadêmica, experiência, idiomas e ferramentas -->
+        <!-- A classe "alternate" muda o fundo para separar visualmente as seções -->
+        <section id="formacao" class="section alternate">
+            <div class="section-heading"><span>02</span><h2>Formação</h2></div>
+
+            <h3 class="subtitle">Formação acadêmica</h3>
+            <!-- Cada <article class="timeline-item"> é um item da linha do tempo; a .tag indica o status -->
+            <div class="timeline">
+                <article class="timeline-item">
+                    <div class="tag">CONCLUÍDO</div>
+                    <div>
+                        <h3>Biblioteconomia e Ciência da Informação</h3>
+                        <p class="institution">Universidade Federal de Minas Gerais — UFMG</p>
+                        <p>Foco em organização, classificação, curadoria, recuperação e governança da informação. Experiência com estruturação de acervos, taxonomias, metadados, qualidade e documentação, aplicando esses conhecimentos hoje ao contexto de dados.</p>
+                    </div>
+                </article>
+                <article class="timeline-item">
+                    <div class="tag">EM ANDAMENTO</div>
+                    <div>
+                        <h3>Sistemas de Informação</h3>
+                        <p class="institution">Centro Universitário Internacional — UNINTER</p>
+                        <p>Formação voltada à tecnologia, desenvolvimento de sistemas, bancos de dados, programação, redes e análise de dados, ampliando minha base técnica para atuar na engenharia e gestão de dados.</p>
+                    </div>
+                </article>
+            </div>
+
+            <h3 class="subtitle">Experiência profissional</h3>
+            <div class="timeline">
+                <article class="timeline-item">
+                    <div class="tag">ATUAL</div>
+                    <div>
+                        <h3>Engenheira de Dados Jr.</h3>
+                        <p class="institution"> ioasys part of Alpargatas — TI Dados & Analytics</p>
+                        <p>Atuo na engenharia e sustentação de dados no ecossistema SAP, operando pipelines de ingestão e transformação do SAP ECC ao Datasphere e Databricks, monitorando cargas e capacidade, e desenvolvendo soluções de BI e planning no SAP Analytics Cloud, com foco em qualidade, rastreabilidade e governança dos dados.
+</p>
+                    </div>
+                </article>
+                <article class="timeline-item">
+                    <div class="tag">ANTERIOR</div>
+                    <div>
+                        <h3>Analista de Documentação</h3>
+                        <p class="institution">Prefeitura de Belo Horizonte — PBH</p>
+                        <p>Atuei em projetos de digitalização e gestão de documentos funcionais, coordenando a indexação, catalogação e carga de dados no BH Digital, além de supervisionar uma equipe de 20 estagiários e desenvolver padrões de nomenclaturas, glossários, manuais, políticas e controles para garantir a qualidade, organização e recuperação das informações.
+</p>
+                    </div>
+                </article>
+            </div>
+
+            <h3 class="subtitle">Idiomas</h3>
+            <div class="cards-2">
+                <article class="card"><span class="tag">AVANÇADO</span><h3>Inglês</h3><p>Escuta, leitura e fala</p></article>
+                <article class="card"><span class="tag">INTERMEDIÁRIO</span><h3>Espanhol</h3><p>Escuta, leitura e fala em desenvolvimento</p></article>
+            </div>
+
+            <h3 class="subtitle">Ferramentas & tecnologias</h3>
+            <!-- Chips de texto -->
+            <ul class="chips">
+                <li>SQL</li><li>Python</li><li>Databricks</li><li>Apache Spark</li><li>SAP Business Data Cloud</li><li>SAP Datasphere</li><li>SAP BW</li><li>SAP Analytics Cloud</li><li>Modelagem de Dados</li><li>ETL / ELT</li><li>Bancos de Dados</li><li>APIs</li><li>Cloud</li><li>Data Quality</li>
+            </ul>
+        </section>
+
+        <!-- PORTFÓLIO -->
+        <section id="portfolio" class="section">
+            <div class="section-heading"><span>03</span><h2>Portfólio</h2></div>
+            <!-- Os links externos abrem em nova aba; rel="noopener noreferrer" evita que a página aberta acesse esta janela (segurança) -->
+            <div class="cards-2">
+                </article>
+                <article class="card project">
+                    <h3>O Ciclo de Vida dos Dados na prática com SAP Business Data Cloud</h3>
+                    <p>Minha atuação com o SAP BDC, SAP Datasphere e Databricks, organizada pelas etapas do ciclo de vida dos dados do livro <em>Fundamentals of Data Engineering</em> (Reis e Housley).</p>
+                    <a href="https://lnkd.in/p/dryQWv7Y" target="_blank" rel="noopener noreferrer">Ver conteúdo →</a>
+                </article>
+                <article class="card project">
+                    <h3>FakeNot: checagem de desinformação política com IA</h3>
+                    <p>Concepção (em andamento) de um sistema para bibliotecas que analisa textos e links de conteúdo político, compara com fontes confiáveis e devolve um score de veracidade com explicação. Disponível como site, aplicativo e extensão de navegador.</p>
+                    <a href="https://drive.google.com/file/d/1lo8Yp99IU-kpCKO3dHMNO93faTrrKtTN/view?usp=sharing" target="_blank" rel="noopener noreferrer">Ver relatório →</a>
+                </article>
+                <article class="card project">
+                    <h3>Jogo sobre Divas Pop</h3>
+                    <p>Jogo em Python com tema de divas pop, unindo lógica de programação e um projeto lúdico.</p>
+                    <a href="https://lnkd.in/p/dPv_JRE7" target="_blank" rel="noopener noreferrer">Ver projeto →</a>
+                </article>
+                <article class="card project">
+                    <h3>Curadoria Digital: Cafés de BH</h3>
+                    <p>Curadoria digital sobre cafeterias de Belo Horizonte, aplicando princípios de organização da informação.</p>
+                    <a href="https://labcms.eci.ufmg.br/cafeehorizonte/" target="_blank" rel="noopener noreferrer">Ver projeto →</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- CONTATO -->
+        <section id="contato" class="section alternate">
+            <div class="section-heading"><span>04</span><h2>Contato</h2></div>
+            <div class="two-cols">
+                <div>
+                    <p class="lead">Quer conversar sobre dados, tecnologia ou projetos?</p>
+                    <p class="about-text">Preencha o formulário ao lado.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/izabela-gon%C3%A7alves/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+                    </div>
+                </div>
+
+                <!-- novalidate desativa a validação nativa do navegador: as regras e mensagens de erro vêm do script.js -->
+                <form id="contactForm" class="contact-form" novalidate>
+                    <!-- Cada campo tem um <small class="error"> próprio onde o script exibe a mensagem de erro; role="alert" faz leitores de tela anunciá-la -->
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" placeholder="Seu nome">
+                        <small class="error" id="nameError" role="alert"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" placeholder="seu@email.com">
+                        <small class="error" id="emailError" role="alert"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" rows="5" placeholder="Escreva sua mensagem"></textarea>
+                        <small class="error" id="messageError" role="alert"></small>
+                    </div>
+                    <button type="submit" class="button primary">Enviar mensagem</button>
+                    <!-- Mensagem de sucesso: aria-live avisa leitores de tela quando o texto aparece; tabindex="-1" permite focar nela via JS -->
+                    <p id="successMessage" class="success-message" aria-live="polite" tabindex="-1"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Izabela Gonçalves | Belo Horizonte, Minas Gerais</p>
+    </footer>
+
+    <!-- Script no final do body: o HTML já foi carregado quando o JS roda -->
+    <script src="script.js"></script>
+</body>
+
+</html>
