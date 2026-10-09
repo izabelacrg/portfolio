@@ -2,7 +2,7 @@
 
 Site de portfólio pessoal de página única, desenvolvido com HTML, CSS e JavaScript puros (sem frameworks ou bibliotecas). Apresenta minha trajetória na interseção entre Biblioteconomia, Sistemas de Informação e Engenharia de Dados.
 
-🔗 Acesse o site: 
+🔗 Acesse o site: https://belaiza13.github.io/portfolio/
 
 ## Sobre o projeto
 
